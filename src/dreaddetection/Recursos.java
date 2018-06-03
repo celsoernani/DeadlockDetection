@@ -74,6 +74,10 @@ public class Recursos {
 	public void setId(int id) {
 		this.id = id;
 	}
+        public int getAmount() {
+		return amount;
+	}
+	
 	
 	
 	@Override

@@ -20,7 +20,7 @@ import javafx.scene.layout.AnchorPane;
  */
 public class Tela2Controller implements Initializable {
     
-       @FXML
+      @FXML
     private AnchorPane Ancora1;
 
     @FXML
@@ -36,151 +36,91 @@ public class Tela2Controller implements Initializable {
     private AnchorPane AncoraP4;
 
     @FXML
-    private TextField minSol4;
+    private TextField Sol4;
 
     @FXML
-    private TextField maxSol4;
-
-    @FXML
-    private TextField minUti4;
-
-    @FXML
-    private TextField maxUti4;
+    private TextField Uti4;
 
     @FXML
     private AnchorPane AncoraP5;
 
     @FXML
-    private TextField minSol5;
+    private TextField Sol5;
 
     @FXML
-    private TextField maxSol5;
-
-    @FXML
-    private TextField minUti5;
-
-    @FXML
-    private TextField maxUti5;
+    private TextField Uti5;
 
     @FXML
     private AnchorPane AncoraP6;
 
     @FXML
-    private TextField minSol6;
+    private TextField Sol6;
 
     @FXML
-    private TextField maxSol6;
-
-    @FXML
-    private TextField minUti6;
-
-    @FXML
-    private TextField maxUti6;
+    private TextField Uti6;
 
     @FXML
     private AnchorPane AncoraP1;
 
     @FXML
-    private TextField minSol1;
+    private TextField Sol1;
 
     @FXML
-    private TextField maxSol1;
-
-    @FXML
-    private TextField minUti1;
-
-    @FXML
-    private TextField maxUti1;
+    private TextField Uti1;
 
     @FXML
     private AnchorPane AncoraP2;
 
     @FXML
-    private TextField minSol2;
+    private TextField Sol2;
 
     @FXML
-    private TextField maxSol2;
-
-    @FXML
-    private TextField minUti2;
-
-    @FXML
-    private TextField maxUti2;
+    private TextField Uti2;
 
     @FXML
     private AnchorPane AncoraP8;
 
     @FXML
-    private TextField minSol8;
+    private TextField Sol8;
 
     @FXML
-    private TextField maxSol8;
-
-    @FXML
-    private TextField minUti8;
-
-    @FXML
-    private TextField maxUti8;
+    private TextField Uti8;
 
     @FXML
     private AnchorPane AncoraP3;
 
     @FXML
-    private TextField minSol3;
+    private TextField Sol3;
 
     @FXML
-    private TextField maxSol3;
-
-    @FXML
-    private TextField minUti3;
-
-    @FXML
-    private TextField maxUti3;
+    private TextField Uti3;
 
     @FXML
     private AnchorPane AncoraP10;
 
     @FXML
-    private TextField minSol10;
+    private TextField Sol10;
 
     @FXML
-    private TextField maxSol10;
-
-    @FXML
-    private TextField minUti10;
-
-    @FXML
-    private TextField maxUti10;
+    private TextField Uti10;
 
     @FXML
     private AnchorPane AncoraP7;
 
     @FXML
-    private TextField minSol7;
+    private TextField Sol7;
 
     @FXML
-    private TextField maxSol7;
-
-    @FXML
-    private TextField minUti7;
-
-    @FXML
-    private TextField maxUti7;
+    private TextField Uti7;
 
     @FXML
     private AnchorPane AncoraP9;
 
     @FXML
-    private TextField minSol9;
+    private TextField Sol9;
 
     @FXML
-    private TextField maxSol9;
-
-    @FXML
-    private TextField minUti9;
-
-    @FXML
-    private TextField maxUti9;
+    private TextField Uti9;
 
     @FXML
     private AnchorPane Ancora3;
