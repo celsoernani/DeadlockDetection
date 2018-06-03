@@ -17,18 +17,18 @@ public class Recursos {
         private static int lastId = 0;
 	private String nome;
 	private int id;
-        private final int amount;
+        private final int quant;
         private int availableInstances;
         Semaphore disponivel = new Semaphore(1);
    
 	
 
 	
-	public Recursos( int id, String nome, int amount) {
+	public Recursos( int id, String nome, int quant) {
 		this.nome = nome;
 		this.id = id;
-                this.amount = amount;
-		this.availableInstances = this.amount;
+                this.quant = quant;
+		this.availableInstances = this.quant;
 		this.id = ++lastId;
 	}
 
@@ -55,6 +55,17 @@ public class Recursos {
         public int availableInstances() {
 		return this.disponivel.availablePermits();
 	}
+        
+        //função que liberar o semafaro do recurso, assim o liberando 
+        
+        public void liberarRecurso() throws InterruptedException {
+		disponivel.acquire();
+	}
+	
+	  //função que liberar o semafaro do recurso, na quantidade de processos que o possuem ou tentem assim o liberando 
+	public void liberarRecurso(int quant) throws InterruptedException {
+		disponivel.acquire(quant);
+	}
 	
 	
 	// Getters and Setters
@@ -74,15 +85,16 @@ public class Recursos {
 	public void setId(int id) {
 		this.id = id;
 	}
-        public int getAmount() {
-		return amount;
+        public int getQuant() {
+		return quant;
 	}
+	
 	
 	
 	
 	@Override
 	public String toString() {
-		return "Id: " + this.id + "\nName: " + this.nome;
+		return "Id: " + this.id + "\nName: " + this.nome + "\nAmount: " + this.quant;
 	}
 	
 }
