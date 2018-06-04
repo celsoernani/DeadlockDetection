@@ -5,13 +5,19 @@
  */
 package dreaddetection;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -20,107 +26,11 @@ import javafx.scene.layout.AnchorPane;
  */
 public class Tela2Controller implements Initializable {
     
-      @FXML
+    @FXML
     private AnchorPane Ancora1;
 
     @FXML
     private TextField Nome1;
-
-    @FXML
-    private Button ButtonGo;
-
-    @FXML
-    private TextField temp_verifica;
-
-    @FXML
-    private AnchorPane AncoraP4;
-
-    @FXML
-    private TextField Sol4;
-
-    @FXML
-    private TextField Uti4;
-
-    @FXML
-    private AnchorPane AncoraP5;
-
-    @FXML
-    private TextField Sol5;
-
-    @FXML
-    private TextField Uti5;
-
-    @FXML
-    private AnchorPane AncoraP6;
-
-    @FXML
-    private TextField Sol6;
-
-    @FXML
-    private TextField Uti6;
-
-    @FXML
-    private AnchorPane AncoraP1;
-
-    @FXML
-    private TextField Sol1;
-
-    @FXML
-    private TextField Uti1;
-
-    @FXML
-    private AnchorPane AncoraP2;
-
-    @FXML
-    private TextField Sol2;
-
-    @FXML
-    private TextField Uti2;
-
-    @FXML
-    private AnchorPane AncoraP8;
-
-    @FXML
-    private TextField Sol8;
-
-    @FXML
-    private TextField Uti8;
-
-    @FXML
-    private AnchorPane AncoraP3;
-
-    @FXML
-    private TextField Sol3;
-
-    @FXML
-    private TextField Uti3;
-
-    @FXML
-    private AnchorPane AncoraP10;
-
-    @FXML
-    private TextField Sol10;
-
-    @FXML
-    private TextField Uti10;
-
-    @FXML
-    private AnchorPane AncoraP7;
-
-    @FXML
-    private TextField Sol7;
-
-    @FXML
-    private TextField Uti7;
-
-    @FXML
-    private AnchorPane AncoraP9;
-
-    @FXML
-    private TextField Sol9;
-
-    @FXML
-    private TextField Uti9;
 
     @FXML
     private AnchorPane Ancora3;
@@ -176,13 +86,38 @@ public class Tela2Controller implements Initializable {
     @FXML
     private TextField Nome10;
 
-    public  Tela2Controller(int quant_recursos, int quant_processos){
+    @FXML
+    private Button buttonGO;
+    
+    @FXML
+    private void handleButtonAction(ActionEvent event) throws IOException {
+              //  pegar valores e nomes dos recursos
+                FXMLLoader TelaGrafo = new FXMLLoader(getClass().getResource("TelaGrafo.fxml"));
+               //TODO parametrizar "TelaGrafoController
+                TelaGrafo.setController(new TelaGrafoController());
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(new Scene(TelaGrafo.load()));
+                stage.show();
+    }
+
+
+        private final int quant_recursos;
+    public  Tela2Controller(int quant_recursos){
         this.quant_recursos = quant_recursos;
-        this.quant_processos = quant_processos;
+ 
         }
 
-    private final int quant_recursos;
-    private final int quant_processos;
+    
+    public void RecursosSetup(int quant_recursos) {
+               for(int i = 0; i<quant_recursos; i++) {
+                   
+
+			
+		}
+    }  
+    
+     
+ 
 
     
 
@@ -312,135 +247,10 @@ public class Tela2Controller implements Initializable {
            default:
                break;
        }
-        switch (quant_processos) {
-           case 1:
-               AncoraP1.setVisible(true);
-               AncoraP2.setVisible(false);
-               AncoraP3.setVisible(false);
-               AncoraP4.setVisible(false);
-               AncoraP5.setVisible(false);
-               AncoraP6.setVisible(false);
-               AncoraP7.setVisible(false);
-               AncoraP8.setVisible(false);
-               AncoraP9.setVisible(false);
-               AncoraP10.setVisible(false);
-               break;
-           case 2:
-               AncoraP1.setVisible(true);
-               AncoraP2.setVisible(true);
-               AncoraP3.setVisible(false);
-               AncoraP4.setVisible(false);
-               AncoraP5.setVisible(false);
-               AncoraP6.setVisible(false);
-               AncoraP7.setVisible(false);
-               AncoraP8.setVisible(false);
-               AncoraP9.setVisible(false);
-               AncoraP10.setVisible(false);
-               break;
-           case 3:
-               AncoraP1.setVisible(true);
-               AncoraP2.setVisible(true);
-               AncoraP3.setVisible(true);
-               AncoraP4.setVisible(false);
-               AncoraP5.setVisible(false);
-               AncoraP6.setVisible(false);
-               AncoraP7.setVisible(false);
-               AncoraP8.setVisible(false);
-               AncoraP9.setVisible(false);
-               AncoraP10.setVisible(false);
-               break;
-           case 4:
-               AncoraP1.setVisible(true);
-               AncoraP2.setVisible(true);
-               AncoraP3.setVisible(true);
-               AncoraP4.setVisible(true);
-               AncoraP5.setVisible(false);
-               AncoraP6.setVisible(false);
-               AncoraP7.setVisible(false);
-               AncoraP8.setVisible(false);
-               AncoraP9.setVisible(false);
-               AncoraP10.setVisible(false);
-               break;
-           case 5:
-               AncoraP1.setVisible(true);
-               AncoraP2.setVisible(true);
-               AncoraP3.setVisible(true);
-               AncoraP4.setVisible(true);
-               AncoraP5.setVisible(true);
-               AncoraP6.setVisible(false);
-               AncoraP7.setVisible(false);
-               AncoraP8.setVisible(false);
-               AncoraP9.setVisible(false);
-               AncoraP10.setVisible(false);
-               break;
-           case 6:
-               AncoraP1.setVisible(true);
-               AncoraP2.setVisible(true);
-               AncoraP3.setVisible(true);
-               AncoraP4.setVisible(true);
-               AncoraP5.setVisible(true);
-               AncoraP6.setVisible(true);
-               AncoraP7.setVisible(false);
-               AncoraP8.setVisible(false);
-               AncoraP9.setVisible(false);
-               AncoraP10.setVisible(false);
-               break;
-           case 7:
-               AncoraP1.setVisible(true);
-               AncoraP2.setVisible(true);
-               AncoraP3.setVisible(true);
-               AncoraP4.setVisible(true);
-               AncoraP5.setVisible(true);
-               AncoraP6.setVisible(true);
-               AncoraP7.setVisible(true);
-               AncoraP8.setVisible(false);
-               AncoraP9.setVisible(false);
-               AncoraP10.setVisible(false);
-               break;
-           case 8:
-               AncoraP1.setVisible(true);
-               AncoraP2.setVisible(true);
-               AncoraP3.setVisible(true);
-               AncoraP4.setVisible(true);
-               AncoraP5.setVisible(true);
-               AncoraP6.setVisible(true);
-               AncoraP7.setVisible(true);
-               AncoraP8.setVisible(true);
-               AncoraP9.setVisible(false);
-               AncoraP10.setVisible(false);
-               break;
-           case 9:
-               AncoraP1.setVisible(true);
-               AncoraP2.setVisible(true);
-               AncoraP3.setVisible(true);
-               AncoraP4.setVisible(true);
-               AncoraP5.setVisible(true);
-               AncoraP6.setVisible(true);
-               AncoraP7.setVisible(true);
-               AncoraP8.setVisible(true);
-               AncoraP9.setVisible(true);
-               AncoraP10.setVisible(false);
-               break;
-           case 10:
-               AncoraP1.setVisible(true);
-               AncoraP2.setVisible(true);
-               AncoraP3.setVisible(true);
-               AncoraP4.setVisible(true);
-               AncoraP5.setVisible(true);
-               AncoraP6.setVisible(true);
-               AncoraP7.setVisible(true);
-               AncoraP8.setVisible(true);
-               AncoraP9.setVisible(true);          
-               AncoraP10.setVisible(true);
-               break;
-           default:
-               break;
-       }
+        
     
     }
-//    public void run(){
-//            setarEspaços();
-//    }
+
   
     @Override
     public void initialize(URL url, ResourceBundle rb) {

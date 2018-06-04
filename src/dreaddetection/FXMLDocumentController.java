@@ -25,22 +25,19 @@ import javafx.stage.Stage;
 public class FXMLDocumentController implements Initializable {
     
    
-    @FXML
+   @FXML
     private Button StartButton;
 
     @FXML
     private Slider Slider;
 
-    @FXML
-    private Slider Slider1;
   
     
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
                 int rec = (int) Slider.getValue();
-                int rec1 = (int) Slider1.getValue();
                 FXMLLoader tela2 = new FXMLLoader(getClass().getResource("Tela2.fxml"));
-                tela2.setController(new Tela2Controller(rec, rec1));
+                tela2.setController(new Tela2Controller(rec));
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(new Scene(tela2.load()));
                 stage.show();
