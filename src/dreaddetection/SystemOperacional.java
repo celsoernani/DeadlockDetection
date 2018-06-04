@@ -23,6 +23,7 @@ public class SystemOperacional implements Runnable {
 	private ArrayList<Processos> processes = new ArrayList<Processos>();
 	private int time;
         
+        
         public SystemOperacional(int tempo) {
 		this.time = tempo;
 	
@@ -210,8 +211,8 @@ public Recursos getResourceById(int id)
 	public int getTime() {
 		return time;
 	}
-
-
+        
+    
 
 
 	public void addResource(Recursos resource) {
